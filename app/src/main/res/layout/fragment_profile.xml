@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/profile_bg">
+
+        <TextView
+            android:id="@+id/tv_ProfilePicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Profile:"
+            android:fontFamily="@font/biorhyme_extrabold"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_profilePicture"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_below="@id/tv_ProfilePicture"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/app_logo" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lay_profileEmail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="60dp"
+            android:layout_below="@+id/iv_profilePicture"
+            android:hint="Email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_profileEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_background"
+                android:paddingTop="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lay_profileName"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="60dp"
+            android:layout_below="@+id/lay_profileEmail"
+            android:hint="Name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_profileName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_background"
+                android:paddingTop="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lay_profileContact"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="60dp"
+            android:layout_below="@+id/lay_profileName"
+            android:hint="Contact">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_profileContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_background"
+                android:paddingTop="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lay_profilePassword"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="60dp"
+            android:layout_below="@+id/lay_profileContact"
+            android:hint="Password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_profilePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_background"
+                android:paddingTop="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                android:inputType="textPassword"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/logoutbtn"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lay_profilePassword"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_toStartOf="@+id/btn_profileUpdate"
+            android:background="@drawable/button_background"
+            android:text="LogOut"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_profileUpdate"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lay_profilePassword"
+            android:layout_alignEnd="@+id/lay_profilePassword"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_background"
+            android:text="Update"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Final Project (Mobile)</string>
+    <string name="title_home">Home</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_feedback">Feedback</string>
+    <string name="title_reward">Reward</string>
+
+    <string name="app_title">Xiamen Tourism App</string>
+
+    <!-- Login -->
+    <string name="Login_other">LOGIN IN WITH</string>
+    <string name="slogan">A Destination For The New Millennium</string>
+
+    <!-- Register -->
+    <string name="TC">By Clicking Sign Up, you agree to Xiamen Tourism App\'s Privacy Policy and Term &amp; Conditions</string>
+
+    <!-- Card Name -->
+    <string name="restaurant">Restaurants</string>
+    <string name="hotels">Hotels</string>
+    <string name="airports">Airports</string>
+    <string name="shops">Shops</string>
+
+    <!-- Featured Location -->
+    <string name="featured_location">Featured Location</string>
+    <string name="featured_location_description">All locations that are recommended and featured in the town. Top Demand for tourists</string>
+
+    <!-- FeedBack Fragment -->
+    <string name="feedback_title">Feedback Form</string>
+    <string name="feedback_description_title">We Value Your Feedback!</string>
+    <string name="feedback_description">Press on the button to complete the form and \n help us to improve our user experience.</string>
+
+    <!-- Feedback Form Activity -->
+    <string name="feedbackform_title">Feedback Form</string>
+    <string name="feedbackform_description">Please Enter Your Details</string>
+
+    <!-- Reward -->
+    <string name="RewardDescription3">Aeon 30% discount voucher (Capped at RM5)</string>
+    <string name="RewardDescription1">Redeem 1 Free 100plus drink at MyNews (Minimum spend RM0)</string>
+    <string name="RewardDescription2">KFC 25% discount voucher (Minimum spend RM15)</string>
+    <string name="RewardDescription5">7-Eleven 10% discount voucher (Capped at RM5)</string>
+    <string name="RewardDescription4">Get 1 Free Xiamen limited edition T-shirt (Minimum Spend RM0)</string>
+
+</resources>

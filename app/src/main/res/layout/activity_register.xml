@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/register_bg">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <ImageView
+            android:id="@+id/iconRegister"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/app_logo" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iconRegister"
+            android:layout_alignLeft="@+id/lay_RegisterEmail"
+            android:layout_marginBottom="10dp"
+            android:text="Please fill in all the details: "
+            android:textColor="@color/blue"
+            android:textSize="15sp"
+            android:textStyle="bold|italic" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lay_RegisterEmail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/tv2"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_RegisterEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textEmailAddress"
+                android:paddingTop="25dp"
+                android:paddingLeft="30dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:background="@drawable/et_background">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lay_RegisterName"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/lay_RegisterEmail"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Name">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/et_RegisterName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPersonName"
+                android:paddingTop="25dp"
+                android:paddingLeft="30dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:background="@drawable/et_background">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lay_RegisterContact"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/lay_RegisterName"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Contact">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_RegisterContact"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textEmailAddress"
+                android:paddingTop="25dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:background="@drawable/et_background">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lay_RegisterPassword"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/lay_RegisterContact"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="20dp"
+            android:hint="Password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_RegisterPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:paddingTop="25dp"
+                android:textSize="20dp"
+                android:paddingLeft="30dp"
+                android:background="@drawable/et_background">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_RegisterPassword"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="10dp"
+            android:text="@string/TC"
+            android:textAlignment="textStart"
+            android:textColor="@color/blue"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:buttonTint="@color/black"/>
+
+        <Button
+            android:id="@+id/btn_SignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkBox"
+            android:layout_alignRight="@+id/lay_RegisterPassword"
+            android:layout_marginLeft="190dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_background"
+            android:text="Sign Up"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

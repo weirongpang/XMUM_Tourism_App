@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FeedbackFormActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_background">
+
+        <TextView
+            android:id="@+id/feedbackform_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:text="@string/feedbackform_title"
+            android:textColor="@color/blue"
+            android:textSize="30dp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/tv_layout"
+            android:layout_width="400dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/feedbackform_title"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/feedbackform_title_background"
+            android:text="@string/feedbackform_description"
+            android:textAlignment="center"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="400dp"
+            android:layout_height="450dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_layout"
+            android:background="@color/banner_background">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lay_Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="60dp"
+                        android:hint="Name">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_Name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/et_background"
+                            android:paddingTop="20dp"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lay_Contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="60dp"
+                        android:hint="Contact">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_Contact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/et_background"
+                            android:paddingTop="25dp"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/lay_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="60dp"
+                        android:hint="Comment/Feedback/Opinion">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_Comment"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/et_background"
+                            android:paddingTop="25dp"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="60dp">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/lay_Date"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="145dp"
+                            android:hint="Date">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_Date"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/et_background"
+                                android:paddingTop="20dp"
+                                android:textSize="15sp"
+                                android:textStyle="bold|italic" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/btn_Date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="30dp"
+                            android:background="@drawable/button_background"
+                            android:drawableLeft="@drawable/ic_baseline_calendar_today_24"
+                            android:text="Set Date"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout1"
+            android:layout_alignStart="@+id/relativeLayout1"
+            android:layout_alignEnd="@id/relativeLayout1"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:text="Submit"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</LinearLayout>

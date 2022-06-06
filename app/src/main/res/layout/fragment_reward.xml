@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/home_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="70dp">
+
+        <TextView
+            android:id="@+id/tv_point"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:text="Point"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/tv_point"
+            android:background="@drawable/line" />
+
+        <TextView
+            android:id="@+id/tv_pointDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_line"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Total Points: "
+            android:textColor="@color/blue"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_totalPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_line"
+            android:layout_alignEnd="@+id/view_line"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="0 pts"
+            android:textAlignment="textEnd"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/tv_Reward"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:text="Rewards"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/tv_Reward"
+            android:background="@drawable/line" />
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="80dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/redemption_bg"
+                    android:elevation="10dp"
+                    android:padding="10dp"
+                    android:paddingHorizontal="15dp">
+
+                    <ImageView
+                        android:id="@+id/item_logo1"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/redeem_logo2" />
+
+                    <TextView
+                        android:id="@+id/point_value1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/item_logo1"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="5dp"
+                        android:text="200 pts"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/item_logo1">
+
+                        <TextView
+                            android:id="@+id/redemption_count1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 Redemptions" />
+
+
+                        <TextView
+                            android:id="@+id/redemption_details1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/redemption_count1"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/RewardDescription1"
+                            android:textColor="@color/blue"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/redemption_duration1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/redemption_details1"
+                            android:layout_marginTop="10dp"
+                            android:text="Expires in 30days"
+                            android:textColor="@color/grey"
+                            android:textSize="11sp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_redeem1"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/redemption_details1"
+                            android:layout_alignEnd="@id/redemption_details1"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/button_background"
+                            android:padding="0dp"
+                            android:text="Claim" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/redemption_bg"
+                    android:elevation="10dp"
+                    android:padding="10dp"
+                    android:paddingHorizontal="15dp">
+
+                    <ImageView
+                        android:id="@+id/item_logo2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/redeem_logo3"
+                        tools:ignore="DuplicateIds" />
+
+                    <TextView
+                        android:id="@+id/point_value2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/item_logo2"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="5dp"
+                        android:text="300 pts"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/item_logo2">
+
+                        <TextView
+                            android:id="@+id/redemption_count2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 Redemptions" />
+
+                        <TextView
+                            android:id="@+id/redemption_details2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/redemption_count2"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/RewardDescription2"
+                            android:textColor="@color/blue"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/redemption_duration2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/redemption_details2"
+                            android:layout_marginTop="10dp"
+                            android:text="Expires in 30days"
+                            android:textColor="@color/grey"
+                            android:textSize="11sp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_redeem2"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/redemption_details2"
+                            android:layout_alignEnd="@id/redemption_details2"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/button_background"
+                            android:padding="0dp"
+                            android:text="Claim" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/redemption_bg"
+                    android:elevation="10dp"
+                    android:padding="10dp"
+                    android:paddingHorizontal="15dp">
+
+                    <ImageView
+                        android:id="@+id/item_logo3"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/redeem_logo1" />
+
+                    <TextView
+                        android:id="@+id/point_value3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/item_logo3"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="5dp"
+                        android:text="400 pts"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/item_logo3">
+
+                        <TextView
+                            android:id="@+id/redemption_count3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 Redemptions" />
+
+                        <TextView
+                            android:id="@+id/redemption_details3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/redemption_count3"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/RewardDescription3"
+                            android:textColor="@color/blue"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/redemption_duration3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/redemption_details3"
+                            android:layout_marginTop="10dp"
+                            android:text="Expires in 30days"
+                            android:textColor="@color/grey"
+                            android:textSize="11sp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_redeem3"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/redemption_details3"
+                            android:layout_alignEnd="@id/redemption_details3"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/button_background"
+                            android:padding="0dp"
+                            android:text="Claim" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/redemption_bg"
+                    android:elevation="10dp"
+                    android:padding="10dp"
+                    android:paddingHorizontal="15dp">
+
+                    <ImageView
+                        android:id="@+id/item_logo4"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/redeem_logo2" />
+
+                    <TextView
+                        android:id="@+id/point_value4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/item_logo4"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="5dp"
+                        android:text="500 pts"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/item_logo4">
+
+                        <TextView
+                            android:id="@+id/redemption_count4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 Redemptions" />
+
+                        <TextView
+                            android:id="@+id/redemption_details4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/redemption_count4"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/RewardDescription4"
+                            android:textColor="@color/blue"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/redemption_duration4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/redemption_details4"
+                            android:layout_marginTop="10dp"
+                            android:text="Expires in 30days"
+                            android:textColor="@color/grey"
+                            android:textSize="11sp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_redeem4"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/redemption_details4"
+                            android:layout_alignEnd="@id/redemption_details4"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/button_background"
+                            android:padding="0dp"
+                            android:text="Claim" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/redemption_bg"
+                    android:elevation="10dp"
+                    android:padding="10dp"
+                    android:paddingHorizontal="15dp">
+
+                    <ImageView
+                        android:id="@+id/item_logo5"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/redeem_logo4" />
+
+                    <TextView
+                        android:id="@+id/point_value5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/item_logo5"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="5dp"
+                        android:text="200 pts"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/item_logo5">
+
+                        <TextView
+                            android:id="@+id/redemption_count5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 Redemptions" />
+
+                        <TextView
+                            android:id="@+id/redemption_details5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/redemption_count5"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/RewardDescription5"
+                            android:textColor="@color/blue"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/redemption_duration5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/redemption_details5"
+                            android:layout_marginTop="10dp"
+                            android:text="Expires in 30days"
+                            android:textColor="@color/grey"
+                            android:textSize="11sp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_redeem5"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/redemption_details5"
+                            android:layout_alignEnd="@id/redemption_details5"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/button_background"
+                            android:padding="0dp"
+                            android:text="Claim" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</LinearLayout>
